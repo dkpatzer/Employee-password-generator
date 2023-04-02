@@ -18,8 +18,14 @@
 
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
-  
-}
+  function pickPasswordAttributes() {
+   var length = parseInt(prompt('Password Length'));
+   if(length >= 8 && length <= 128) {
+    console.log("Password must be between 8 and 128 characters");
+    return null
+  }
+  }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
